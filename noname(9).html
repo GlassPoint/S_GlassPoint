@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SAK_GlassPoint | Pure Glass Solutions</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#061018;
+    color:white;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(3,12,18,.97);
+    border-bottom:1px solid #1d5266;
+    padding:15px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:800;
+    color:#7ee8ff;
+}
+
+.logo span{
+    color:white;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:22px;
+}
+
+nav a{
+    font-weight:700;
+}
+
+nav a:hover{
+    color:#71e5ff;
+}
+
+.menu{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:60px 6%;
+
+    background:
+    radial-gradient(
+        circle at center,
+        #15556b,
+        #061018 65%
+    );
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.tagline{
+    color:#7ee8ff;
+    letter-spacing:4px;
+    font-weight:800;
+    margin-bottom:14px;
+}
+
+.hero h1{
+    font-size:clamp(42px,8vw,70px);
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+.hero h1 span{
+    color:#71e5ff;
+}
+
+.hero p{
+    font-size:20px;
+    color:#d5edf3;
+    margin-bottom:28px;
+}
+
+.btn{
+    display:inline-block;
+    background:#0eb9df;
+    color:white;
+    padding:13px 25px;
+    border-radius:30px;
+    font-weight:800;
+    margin:6px;
+    transition:.25s;
+    border:0;
+    cursor:pointer;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    background:#087e9b;
+}
+
+.btn-outline{
+    background:transparent;
+    border:1px solid #71e5ff;
+}
+
+
+/* ================= GENERAL ================= */
+
+section{
+    padding:75px 6%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:42px;
+}
+
+.section-title h2{
+    font-size:38px;
+    margin-bottom:8px;
+}
+
+.section-title p{
+    color:#9fc1cb;
+}
+
+
+/* ================= SERVICES ================= */
+
+.services{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:22px;
+}
+
+.card{
+    background:#0b202a;
+    padding:28px;
+    border-radius:15px;
+    border:1px solid #194858;
+    text-align:center;
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    border-color:#5ddfff;
+}
+
+.icon{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.card h3{
+    color:#75e6ff;
+    margin-bottom:8px;
+}
+
+.card p{
+    color:#b9d0d6;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about{
+    background:#081820;
+}
+
+.about-box{
+    max-width:950px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-box p{
+    color:#c2d9df;
+    font-size:18px;
+}
+
+
+/* ================= GALLERY ================= */
+
+.gallery{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:22px;
+}
+
+.gallery-box{
+    height:210px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:15px;
+    border:1px solid #235768;
+
+    color:#7ee8ff;
+    font-size:20px;
+    font-weight:800;
+
+    background:
+    linear-gradient(
+        135deg,
+        #173d4b,
+        #07131a
+    );
+}
+
+
+/* ================= WHY US ================= */
+
+.why{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(200px,1fr));
+
+    gap:20px;
+}
+
+.why-box{
+    text-align:center;
+    padding:25px;
+}
+
+.why-box strong{
+    display:block;
+    font-size:20px;
+    color:#71e5ff;
+    margin-bottom:7px;
+}
+
+
+/* ================= ORDER ================= */
+
+.order-section{
+    background:#07151d;
+}
+
+.order-wrap{
+    max-width:1050px;
+    margin:auto;
+
+    background:#0b202a;
+
+    border:1px solid #1d5266;
+
+    border-radius:18px;
+
+    padding:28px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:16px;
+}
+
+.field{
+    display:flex;
+    flex-direction:column;
+}
+
+.field.full{
+    grid-column:1/-1;
+}
+
+label{
+    font-weight:700;
+    margin-bottom:6px;
+    color:#d9f3f8;
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:13px;
+
+    border-radius:9px;
+
+    border:1px solid #315b69;
+
+    background:#061018;
+
+    color:white;
+
+    font-size:15px;
+}
+
+textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline:2px solid #0eb9df;
+}
+
+
+/* ================= PRICE ================= */
+
+.price-box{
+
+    margin-top:22px;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    background:#061018;
+
+    border:1px solid #315b69;
+
+    text-align:center;
+}
+
+.price-box small{
+    display:block;
+    color:#9fc1cb;
+}
+
+.price{
+
+    font-size:32px;
+
+    font-weight:900;
+
+    color:#71e5ff;
+}
+
+.notice{
+
+    color:#9fc1cb;
+
+    font-size:13px;
+
+    margin-top:8px;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:#081820;
+    text-align:center;
+}
+
+.contact p{
+    margin:8px;
+    color:#c4dbe0;
+}
+
+.email-link{
+    color:#71e5ff;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    background:#030a0e;
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#8faab2;
+}
+
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp{
+
+    position:fixed;
+
+    right:18px;
+    bottom:18px;
+
+    background:#25d366;
+
+    color:white;
+
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:25px;
+
+    z-index:2000;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.4);
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
+    nav ul{
+
+        display:none;
+
+        position:absolute;
+
+        top:64px;
+        left:0;
+
+        width:100%;
+
+        background:#030c12;
+
+        padding:18px 6%;
+
+        flex-direction:column;
+    }
+
+    nav ul.open{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .field.full{
+        grid-column:auto;
+    }
+
+    section{
+        padding:60px 5%;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+<a href="#home" class="logo">
+
+SAK_<span>GlassPoint</span>
+
+</a>
+
+
+<div class="menu" onclick="toggleMenu()">
+
+☰
+
+</div>
+
+
+<ul id="navLinks">
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#services">Services</a>
+</li>
+
+<li>
+<a href="#order">Order / Quote</a>
+</li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#gallery">Projects</a>
+</li>
+
+<li>
+<a href="#contact">Contact</a>
+</li>
+
+</ul>
+
+</nav>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+
+<div class="tagline">
+
+PURE GLASS SOLUTIONS
+
+</div>
+
+
+<h1>
+
+SAK_<span>GlassPoint</span>
+
+</h1>
+
+
+<p>
+
+Quality glass solutions designed to bring
+elegance, strength and modern vision to
+homes, offices and commercial spaces.
+
+</p>
+
+
+<a
+class="btn"
+href="#order">
+
+Request a Quote
+
+</a>
+
+
+<a
+class="btn btn-outline"
+href="https://wa.me/255789520753"
+target="_blank">
+
+WhatsApp Us
+
+</a>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+
+<div class="section-title">
+
+<h2>
+Our Glass Solutions
+</h2>
+
+<p>
+Quality glass for modern spaces
+</p>
+
+</div>
+
+
+<div class="services">
+
+
+<div class="card">
+
+<div class="icon">🪟</div>
+
+<h3>
+Glass Windows
+</h3>
+
+<p>
+Modern and elegant glass windows
+for homes and commercial buildings.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">🚪</div>
+
+<h3>
+Glass Doors
+</h3>
+
+<p>
+Stylish and durable glass doors
+designed for modern environments.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">🏢</div>
+
+<h3>
+Office Partitions
+</h3>
+
+<p>
+Professional glass partitions
+for modern offices and businesses.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">🚿</div>
+
+<h3>
+Shower Glass
+</h3>
+
+<p>
+Elegant shower glass solutions
+for modern bathrooms.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">🪞</div>
+
+<h3>
+Mirrors
+</h3>
+
+<p>
+High-quality mirrors for homes,
+shops, hotels and offices.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="icon">🏠</div>
+
+<h3>
+Custom Glass
+</h3>
+
+<p>
+Glass solutions designed according
+to your measurements and requirements.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= ORDER FORM ================= -->
+
+<section
+class="order-section"
+id="order">
+
+
+<div class="section-title">
+
+<h2>
+Request a Glass Order / Quote
+</h2>
+
+<p>
+Fill in your requirements and send
+the complete order directly to WhatsApp.
+</p>
+
+</div>
+
+
+
+<div class="order-wrap">
+
+
+<form id="orderForm">
+
+
+<div class="form-grid">
+
+
+<!-- NAME -->
+
+<div class="field">
+
+<label>
+Full Name *
+</label>
+
+<input
+id="name"
+required
+placeholder="Your full name">
+
+</div>
+
+
+
+<!-- PHONE -->
+
+<div class="field">
+
+<label>
+Phone Number *
+</label>
+
+<input
+id="phone"
+type="tel"
+required
+placeholder="07XXXXXXXX">
+
+</div>
+
+
+
+<!-- EMAIL -->
+
+<div class="field">
+
+<label>
+Email
+</label>
+
+<input
+id="customerEmail"
+type="email"
+placeholder="customer@email.com">
+
+</div>
+
+
+
+<!-- PRODUCT -->
+
+<div class="field">
+
+<label>
+Glass / Product *
+</label>
+
+<select
+id="product"
+required>
+
+<option value="">
+Choose product
+</option>
+
+<option>
+Glass Door
+</option>
+
+<option>
+Glass Window
+</option>
+
+<option>
+Office Partition
+</option>
+
+<option>
+Shower Glass
+</option>
+
+<option>
+Mirror
+</option>
+
+<option>
+Custom Glass
+</option>
+
+</select>
+
+</div>
+
+
+
+<!-- GLASS TYPE -->
+
+<div class="field">
+
+<label>
+Glass Type
+</label>
+
+<select id="glassType">
+
+<option>
+Tempered Glass
+</option>
+
+<option>
+Clear Glass
+</option>
+
+<option>
+Tinted Glass
+</option>
+
+<option>
+Laminated Glass
+</option>
+
+<option>
+Other / To be advised
+</option>
+
+</select>
+
+</div>
+
+
+
+<!-- THICKNESS -->
+
+<div class="field">
+
+<label>
+Thickness
+</label>
+
+<select id="thickness">
+
+<option value="1">
+5 mm
+</option>
+
+<option value="1.15">
+6 mm
+</option>
+
+<option value="1.35">
+8 mm
+</option>
+
+<option value="1.55">
+10 mm
+</option>
+
+<option value="1.8">
+12 mm
+</option>
+
+</select>
+
+</div>
+
+
+
+<!-- WIDTH -->
+
+<div class="field">
+
+<label>
+Width (cm) *
+</label>
+
+<input
+id="width"
+type="number"
+min="1"
+step="0.01"
+required
+placeholder="e.g. 100">
+
+</div>
+
+
+
+<!-- HEIGHT -->
+
+<div class="field">
+
+<label>
+Height (cm) *
+</label>
+
+<input
+id="height"
+type="number"
+min="1"
+step="0.01"
+required
+placeholder="e.g. 210">
+
+</div>
+
+
+
+<!-- QUANTITY -->
+
+<div class="field">
+
+<label>
+Quantity *
+</label>
+
+<input
+id="quantity"
+type="number"
+min="1"
+value="1"
+required>
+
+</div>
+
+
+
+<!-- SERVICE -->
+
+<div class="field">
+
+<label>
+Delivery / Installation
+</label>
+
+<select id="service">
+
+<option value="0">
+Customer collection / No installation
+</option>
+
+<option value="30000">
+Installation requested (+ TSh 30,000)
+</option>
+
+<option value="50000">
+Delivery + installation (+ TSh 50,000)
+</option>
+
+</select>
+
+</div>
+
+
+
+<!-- LOCATION -->
+
+<div class="field full">
+
+<label>
+Delivery / Installation Location *
+</label>
+
+<input
+id="location"
+required
+placeholder="e.g. Dar es Salaam, Kinondoni">
+
+</div>
+
+
+
+<!-- NOTES -->
+
+<div class="field full">
+
+<label>
+Special Requirements
+</label>
+
+<textarea
+id="notes"
+placeholder="Colour, frame, fittings, preferred date, or any other requirement...">
+</textarea>
+
+</div>
+
+
+</div>
+
+
+
+<!-- PRICE -->
+
+<div class="price-box">
+
+<small>
+Estimated Price
+</small>
+
+<div
+class="price"
+id="price">
+
+TSh 0
+
+</div>
+
+
+<div class="notice">
+
+This is an estimated price.
+Final price is confirmed after checking
+exact measurements, glass, fittings,
+installation and delivery.
+
+</div>
+
+</div>
+
+
+
+<!-- BUTTON -->
+
+<button
+class="btn"
+type="submit">
+
+💬 Send Complete Order to WhatsApp
+
+</button>
+
+
+<a
+class="btn btn-outline"
+href="mailto:YOUR_EMAIL@example.com">
+
+✉ Email Us
+
+</a>
+
+
+</form>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= ABOUT ================= -->
+
+<section
+class="about"
+id="about">
+
+
+<div class="section-title">
+
+<h2>
+About SAK_GlassPoint
+</h2>
+
+<p>
+QUALITY GLASS • PROFESSIONAL SERVICE
+</p>
+
+</div>
+
+
+<div class="about-box">
+
+<p>
+
+SAK_GlassPoint provides quality glass
+solutions for residential, commercial
+and office spaces.
+
+Our focus is quality, durability,
+modern design and customer satisfaction.
+
+</p>
+
+
+<br>
+
+
+<p>
+
+From glass doors and windows to office
+partitions, shower enclosures, mirrors
+and custom glass solutions, we help
+transform ordinary spaces into elegant
+modern environments.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= GALLERY ================= -->
+
+<section id="gallery">
+
+
+<div class="section-title">
+
+<h2>
+Our Projects
+</h2>
+
+<p>
+Explore our glass work
+</p>
+
+</div>
+
+
+<div class="gallery">
+
+
+<div class="gallery-box">
+GLASS DOORS
+</div>
+
+
+<div class="gallery-box">
+OFFICE PARTITIONS
+</div>
+
+
+<div class="gallery-box">
+SHOWER GLASS
+</div>
+
+
+<div class="gallery-box">
+GLASS WINDOWS
+</div>
+
+
+<div class="gallery-box">
+MODERN MIRRORS
+</div>
+
+
+<div class="gallery-box">
+CUSTOM GLASS
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= WHY US ================= -->
+
+<section>
+
+
+<div class="section-title">
+
+<h2>
+Why Choose Us?
+</h2>
+
+</div>
+
+
+<div class="why">
+
+
+<div class="why-box">
+
+<strong>
+QUALITY
+</strong>
+
+<p>
+We focus on quality glass solutions.
+</p>
+
+</div>
+
+
+
+<div class="why-box">
+
+<strong>
+DURABILITY
+</strong>
+
+<p>
+Strong and reliable glass solutions.
+</p>
+
+</div>
+
+
+
+<div class="why-box">
+
+<strong>
+MODERN DESIGN
+</strong>
+
+<p>
+Elegant designs for modern spaces.
+</p>
+
+</div>
+
+
+
+<div class="why-box">
+
+<strong>
+PROFESSIONAL SERVICE
+</strong>
+
+<p>
+Customer-focused service from
+inquiry to installation.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<section
+class="contact"
+id="contact">
+
+
+<div class="section-title">
+
+<h2>
+Contact SAK_GlassPoint
+</h2>
+
+<p>
+Let's discuss your glass project.
+</p>
+
+</div>
+
+
+<p>
+📞 Phone: 0789 520 753
+</p>
+
+
+<p>
+💬 WhatsApp: Available
+</p>
+
+
+<p>
+📍 Dar es Salaam, Tanzania
+</p>
+
+
+<p>
+
+✉ Email:
+
+<a
+class="email-link"
+href="mailto:YOUR_EMAIL@example.com">
+
+YOUR_EMAIL@example.com
+
+</a>
+
+</p>
+
+
+<a
+class="btn"
+href="#order">
+
+Request a Quote
+
+</a>
+
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+© 2026 SAK_GlassPoint
+</p>
+
+<p>
+PURE GLASS SOLUTIONS • QUALITY GLASS
+</p>
+
+</footer>
+
+
+
+<!-- ================= WHATSAPP ================= -->
+
+<a
+class="whatsapp"
+href="https://wa.me/255789520753"
+target="_blank">
+
+☎
+
+</a>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+document
+.getElementById("navLinks")
+.classList
+.toggle("open");
+
+}
+
+
+
+/*
+==================================================
+PRICE SETTING
+==================================================
+
+THIS IS A TEMPORARY EXAMPLE.
+
+Change 85000 to your REAL price
+per square metre when you know it.
+
+Example:
+
+const pricePerM2 = 100000;
+
+*/
+
+const pricePerM2 = 85000;
+
+
+
+/* CALCULATE PRICE */
+
+function calculatePrice(){
+
+const width =
+parseFloat(
+document.getElementById("width").value
+) || 0;
+
+
+const height =
+parseFloat(
+document.getElementById("height").value
+) || 0;
+
+
+const quantity =
+parseInt(
+document.getElementById("quantity").value
+) || 0;
+
+
+const thickness =
+parseFloat(
+document.getElementById("thickness").value
+) || 1;
+
+
+const service =
+parseFloat(
+document.getElementById("service").value
+) || 0;
+
+
+
+/* CONVERT CM TO METRES */
+
+const area =
+(width / 100) *
+(height / 100);
+
+
+
+/* TOTAL */
+
+const total =
+(area *
+quantity *
+pricePerM2 *
+thickness)
++
+service;
+
+
+
+/* DISPLAY */
+
+document
+.getElementById("price")
+.textContent =
+"TSh " +
+Math.round(total)
+.toLocaleString();
+
+
+
+return Math.round(total);
+
+}
+
+
+
+/* UPDATE PRICE WHEN USER TYPES */
+
+[
+"width",
+"height",
+"quantity",
+"thickness",
+"service"
+
+].forEach(function(id){
+
+document
+.getElementById(id)
+.addEventListener(
+"input",
+calculatePrice
+);
+
+document
+.getElementById(id)
+.addEventListener(
+"change",
+calculatePrice
+);
+
+});
+
+
+
+/* SEND ORDER TO WHATSAPP */
+
+document
+.getElementById("orderForm")
+.addEventListener(
+"submit",
+function(e){
+
+e.preventDefault();
+
+
+
+const total =
+calculatePrice();
+
+
+
+const name =
+document
+.getElementById("name")
+.value;
+
+
+const phone =
+document
+.getElementById("phone")
+.value;
+
+
+const email =
+document
+.getElementById("customerEmail")
+.value ||
+"Not provided";
+
+
+const product =
+document
+.getElementById("product")
+.value;
+
+
+const glassType =
+document
+.getElementById("glassType")
+.value;
+
+
+const thicknessText =
+document
+.getElementById("thickness")
+.selectedOptions[0]
+.text;
+
+
+const width =
+document
+.getElementById("width")
+.value;
+
+
+const height =
+document
+.getElementById("height")
+.value;
+
+
+const quantity =
+document
+.getElementById("quantity")
+.value;
+
+
+const service =
+document
+.getElementById("service")
+.selectedOptions[0]
+.text;
+
+
+const location =
+document
+.getElementById("location")
+.value;
+
+
+const notes =
+document
+.getElementById("notes")
+.value ||
+"None";
+
+
+
+/* WHATSAPP MESSAGE */
+
+const message =
+
+`SAK_GlassPoint ORDER REQUEST
+
+Customer: ${name}
+
+Phone: ${phone}
+
+Email: ${email}
+
+Product: ${product}
+
+Glass Type: ${glassType}
+
+Thickness: ${thicknessText}
+
+Width: ${width} cm
+
+Height: ${height} cm
+
+Quantity: ${quantity}
+
+Service:
+${service}
+
+Location:
+${location}
+
+Estimated Price:
+TSh ${total.toLocaleString()}
+
+Special Requirements:
+${notes}
+
+Please confirm availability,
+final measurement and final price.`;
+
+
+
+/* OPEN WHATSAPP */
+
+window.open(
+
+"https://wa.me/255789520753?text="
+
++
+encodeURIComponent(message),
+
+"_blank"
+
+);
+
+});
+
+</script>
+
+
+</body>
+</html>
